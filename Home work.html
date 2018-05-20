@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            border-left: 1px dotted black;
+            border-right: 1px dotted black;
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .logo {
+
+            text-align: left;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: black;
+            font-size: 22px;
+            font-family: sans-serif;
+            padding-left: 30px;
+            display: inline-block;
+        }
+
+        a>span {
+            display: block;
+            padding: 0 0 50px 35px;
+        }
+        .contact {
+            text-align: right;
+            width: 300px;;
+            color: black;
+            font-size: 22px;
+            padding: 25px 20px 0 0;
+            box-sizing: border-box;
+            display: inline-block;
+            float: right;
+            line-height: 45px;
+        }
+        p>a {
+            color: black;
+            font-family: sans-serif;
+        }
+        .header-nav-list {
+            border-top: 3px solid black;
+            border-bottom: 3px solid black;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <header class="header">
+                <a class="logo" href="#">
+                    <img src="hometask-logo.png" alt="logo">
+                    <span>Eagle team</span>
+                </a>
+                <div class="contact">
+<p><a href="#">team@eagle-team.com</a></p>
+<p><a href="#">+1 (745) 246 - 4586</a></p></div>
+    <nav class="header-nav">
+        <ul class="header-nav-list" >
+        <li class="header-nav-list-item"><a href="#">Home</a></li>
+            <li class="header-nav-list-item"><a href="#">Services</a>
+          <!--   <ul>
+                <li><a href="#">Service 1</a></li>
+                <li><a href="#">Service 2</a></li>
+                <li><a href="#">Service 3</a></li>
+                <li><a href="#">Service 4</a></li>
+            </ul>-->
+            </li>
+            <li class="header-nav-list-item"><a href="#">Blog</a></li>
+            <li class="header-nav-list-item"><a href="#">About</a></li>
+            <li class="header-nav-list-item"><a href="#">Contacts</a></li>
+        </ul>
+    </nav>
+            </header>
+            <main></main>
+            <footer class="footer"></footer>
+        </div>
+    </div>
+</body>
+
+</html>
