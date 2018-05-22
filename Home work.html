@@ -55,6 +55,10 @@
             line-height: 45px;
         }
 
+        li {
+            list-style: none;
+        }
+
         p>a {
             color: black;
             font-family: sans-serif;
@@ -73,11 +77,22 @@
 
         .header-nav-list-item {
             display: inline-block;
+            position: relative;
         }
 
         .header-nav-link {
             padding: 10px;
             display: block;
+        }
+
+        .drop-down {
+            position: absolute;
+            display: none;
+            background-color: #fff;
+        }
+
+        .drop-down-item {
+            white-space: nowrap;
         }
 
         nav a {
@@ -91,11 +106,42 @@
             background-color: black;
         }
 
+        .header-nav-list-item:hover .drop-down {
+            display: block;
+        }
+
+        .main {
+            position: relative;
+        }
+
+        .content {
+            position: absolute;
+            left: 0;
+            width: 70%;
+        }
+
+        .sidebar {
+            position: absolute;
+            right: 0;
+            width: 30%;
+        }
+
         .main-image {
             display: block;
             max-width: 100%;
             height: auto;
             width: 100%;
+        }
+
+        .sidebar-item {
+            border: 1px dotted black;
+            border-radius: 2px;
+            float: right;
+            width: 250px;
+        }
+
+        .footer-nav-list-item {
+            display: inline-block;
         }
     </style>
 </head>
@@ -123,12 +169,20 @@
                         </li>
                         <li class="header-nav-list-item">
                             <a class="header-nav-link" href="#">Services</a>
-                            <!-- <ul>
-                <li><a href="#">Service 1</a></li>
-                <li><a href="#">Service 2</a></li>
-                <li><a href="#">Service 3</a></li>
-                <li><a href="#">Service 4</a></li>
-            </ul> -->
+                            <ul class="drop-down">
+                                <li class="drop-down-item">
+                                    <a class="header-nav-link" href="#">Service 1</a>
+                                </li>
+                                <li class="drop-down-item">
+                                    <a class="header-nav-link" href="#">Service 2</a>
+                                </li>
+                                <li class="drop-down-item">
+                                    <a class="header-nav-link" href="#">Service 3</a>
+                                </li>
+                                <li class="drop-down-item">
+                                    <a class="header-nav-link" href="#">Service 4</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="header-nav-list-item">
                             <a class="header-nav-link" href="#">Blog</a>
@@ -142,18 +196,41 @@
                     </ul>
                 </nav>
             </header>
-            <main></main>
-            <h1 class="contect-name">Simple heading</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam officia nostrum ipsum maiores obcaecati omnis,
-                quaerat harum ullam ad voluptatem, molestias accusamus aliquid. Tempora praesentium quis dolorum voluptas
-                impedit vitae excepturi nobis nesciunt?</p>
-            <img src="eagle-vector.jpg" alt="Simple heading" class="main-image">
-            <h2 class="simple-heading">Simple heading h2</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, aperiam atque quam quas quos laborum nulla neque
-                veritatis reiciendis sed. Consectetur iste ducimus accusantium eaque quisquam laboriosam incidunt, veniam
-                nobis facilis ex sit velit, perspiciatis harum voluptas possimus sapiente quae. Porro ut voluptates vero
-                error iste eaque sapiente illum sequi? Odio amet possimus ullam eligendi nisi nemo itaque iusto nam.</p>
-            <footer cla0ss="footer">
+            <main>
+                <div class="main">
+                <div class="content">
+                    <h1 class="contect-name">Simple heading</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam officia nostrum ipsum maiores obcaecati
+                        omnis, quaerat harum ullam ad voluptatem, molestias accusamus aliquid. Tempora praesentium quis dolorum
+                        voluptas impedit vitae excepturi nobis nesciunt?</p>
+                    <img src="eagle-vector.jpg" alt="Simple heading" class="main-image">
+                    <h2 class="simple-heading">Simple heading h2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, aperiam atque quam quas quos laborum nulla
+                        neque veritatis reiciendis sed. Consectetur iste ducimus accusantium eaque quisquam laboriosam incidunt,
+                        veniam nobis facilis ex sit velit, perspiciatis harum voluptas possimus sapiente quae. Porro ut voluptates
+                        vero error iste eaque sapiente illum sequi? Odio amet possimus ullam eligendi nisi nemo itaque iusto
+                        nam.</p>
+                </div>
+                <div class="sidebar">
+                    <div class="sidebar-item">
+                        <p>Important news! We have a day-off on May 28th</p>
+                        <span>May 5</span>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div class="sidebar-item">
+                        <p>Important news! We have a day-off on May 28th</p>
+                        <span>May 5</span>
+                        <a href="#">Learn more</a>
+                    </div>
+                    <div class="sidebar-item">
+                        <p>Important news! We have a day-off on May 28th</p>
+                        <span>May 5</span>
+                        <a href="#"> Learn more</a>
+                    </div>
+                </div>
+            </div>
+            </main>
+            <footer class="footer">
                 <nav class="footer-nav">
                     <span class="copirate">Eagle team &copy 2016</span>
                     <ul class="footer-nav-list">
