@@ -86,7 +86,6 @@
         }
 
         .drop-down {
-            position: absolute;
             display: none;
             background-color: #fff;
         }
@@ -94,14 +93,13 @@
         .drop-down-item {
             white-space: nowrap;
         }
-
-        nav a {
+        .header-nav .header-nav-link {
             text-decoration: none;
             color: black;
             font-family: sans-serif;
         }
 
-        nav li a:hover {
+        .header-nav .header-nav-link:hover {
             color: #fff;
             background-color: black;
         }
@@ -109,21 +107,16 @@
         .header-nav-list-item:hover .drop-down {
             display: block;
         }
-
-        .main {
-            position: relative;
-        }
-
         .content {
-            position: absolute;
-            left: 0;
+            display: inline-block;
+            border-right: 1px dotted black;
             width: 70%;
         }
 
         .sidebar {
-            position: absolute;
-            right: 0;
+            display: inline-block;
             width: 30%;
+            float: right;
         }
 
         .main-image {
@@ -132,14 +125,22 @@
             height: auto;
             width: 100%;
         }
-
         .sidebar-item {
             border: 1px dotted black;
             border-radius: 2px;
-            float: right;
             width: 250px;
+            margin: auto;
+            margin-top: 10px;
         }
-
+        .footer {
+            background: #000;
+            color: #fff;
+        }
+        .footer-nav .footer-nav-link {
+            text-decoration: none;
+            color: #fff;
+            font-family: sans-serif;
+        }
         .footer-nav-list-item {
             display: inline-block;
         }
@@ -197,7 +198,7 @@
                 </nav>
             </header>
             <main>
-                <div class="main">
+
                 <div class="content">
                     <h1 class="contect-name">Simple heading</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam officia nostrum ipsum maiores obcaecati
@@ -209,7 +210,8 @@
                         neque veritatis reiciendis sed. Consectetur iste ducimus accusantium eaque quisquam laboriosam incidunt,
                         veniam nobis facilis ex sit velit, perspiciatis harum voluptas possimus sapiente quae. Porro ut voluptates
                         vero error iste eaque sapiente illum sequi? Odio amet possimus ullam eligendi nisi nemo itaque iusto
-                        nam.</p>
+                        nam.
+                    </p>
                 </div>
                 <div class="sidebar">
                     <div class="sidebar-item">
@@ -228,26 +230,25 @@
                         <a href="#"> Learn more</a>
                     </div>
                 </div>
-            </div>
             </main>
             <footer class="footer">
                 <nav class="footer-nav">
                     <span class="copirate">Eagle team &copy 2016</span>
                     <ul class="footer-nav-list">
                         <li class="footer-nav-list-item">
-                            <a href="#" class="footer-nav-link">Home</a>
+                            <a class="footer-nav-link" href="#" class="footer-nav-link">Home</a>
                         </li>
                         <li class="footer-nav-list-item">
-                            <a href="#" class="footer-nav-link">Services</a>
+                            <a class="footer-nav-link" href="#" class="footer-nav-link">Services</a>
                         </li>
                         <li class="footer-nav-list-item">
-                            <a href="#" class="footer-nav-link">Blog</a>
+                            <a class="footer-nav-link" href="#" class="footer-nav-link">Blog</a>
                         </li>
                         <li class="footer-nav-list-item">
-                            <a href="#" class="footer-nav-link">About</a>
+                            <a class="footer-nav-link" href="#" class="footer-nav-link">About</a>
                         </li>
                         <li class="footer-nav-list-item">
-                            <a href="#" class="footer-nav-link">Contacts</a>
+                            <a class="footer-nav-link" href="#" class="footer-nav-link">Contacts</a>
                         </li>
                     </ul>
                 </nav>
